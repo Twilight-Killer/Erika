@@ -37,5 +37,5 @@ async def sender_bH(event):
         except Exception as e:
             print(e)
 
-print("User has started.")
+print("Userbot has started.")
 BotzHubUser.run_until_disconnected()
