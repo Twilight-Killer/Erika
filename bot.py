@@ -3,9 +3,11 @@ from decouple import config
 import logging
 from telethon.sessions import StringSession
 
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.WARNING)
+logging.basicConfig(
+    format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+    level=logging.INFO)
 
-print("Starting...")
+print("Starting userbot...")
 
 # Basics
 APP_ID = config("APP_ID", default=None, cast=int)
@@ -35,5 +37,5 @@ async def sender_bH(event):
         except Exception as e:
             print(e)
 
-print("Bot has started.")
+print("User has started.")
 BotzHubUser.run_until_disconnected()
